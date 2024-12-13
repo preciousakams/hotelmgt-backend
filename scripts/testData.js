@@ -27,7 +27,7 @@ mongoose
       const rooms = [];
       for (let i = 0; i < count; i++) {
         rooms.push({
-          name: `${faker.internet.username()} ${roomTypes[Math.floor(Math.random() * roomTypes.length)]}`,
+          name: `${faker.internet.username()}`,
           price: faker.number.int({ min: 50, max: 500 }),
           type: roomTypes[Math.floor(Math.random() * roomTypes.length)],
           image: images[Math.floor(Math.random() * images.length)],
