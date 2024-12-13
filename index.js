@@ -7,8 +7,11 @@ dotenv.config();
 connectDB();
 
 const app = express();
+//middleware
 app.use(cors());
+app.use(express.json())
 
+// routes
 app.use('/rooms', require('./routes/roomRoutes'));
 
 const PORT = process.env.PORT || 5000;
