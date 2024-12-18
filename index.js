@@ -13,6 +13,7 @@ app.use(express.json())
 
 // routes
 app.use('/rooms', require('./routes/roomRoutes'));
+app.use('/bookings', require('./routes/bookingRoutes'));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
