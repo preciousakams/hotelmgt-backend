@@ -6,7 +6,7 @@ const RoomSchema = new mongoose.Schema({
   price: Number,
   image: String,
   description: String,
-  availability: Boolean,
+  availability: { type: Boolean, default: true },
 });
 
 module.exports = mongoose.model('Room', RoomSchema);
