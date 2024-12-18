@@ -10,7 +10,7 @@ router.post('/', async (req, res) => {
 
     const room = await Room.findById(roomId);
     if (!room) return res.status(404).json({ error: 'Room not found' });
-
+    console.log(req.body)
     const booking = new Booking({
       roomId,
       customerName,
@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
       checkOut,
       totalPrice,
     });
-
+   
     await booking.save();
     res.status(201).json(booking);
   } catch (error) {
