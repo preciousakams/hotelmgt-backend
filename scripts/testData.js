@@ -40,7 +40,7 @@ mongoose
     
     // Save generated rooms to the database
     const seedDatabase = async () => {
-      const rooms = generateRooms(10); // Generate 10 rooms
+      const rooms = generateRooms(20); // Generate 10 rooms
       try {
         await Room.deleteMany(); // Clear existing data
         await Room.insertMany(rooms); // Insert new data
